@@ -25,4 +25,9 @@ public class Punkt2D
         X = point2D.X;
         Y = point2D.Y;
     }
+
+    public override string ToString()
+    {
+        return $"{X}, {Y}";
+    }
 }

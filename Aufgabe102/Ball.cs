@@ -1,4 +1,6 @@
-﻿namespace Aufgabe102;
+﻿using System;
+
+namespace Aufgabe102;
 
 public class Ball
 {
@@ -13,5 +15,37 @@ public class Ball
     {
         Farbe = farbe;
         Position = position;
+    }
+
+    //Methoden
+
+    //public int AddVector(int x, int y, int z)
+    //{
+    //    return 
+    //}
+
+    //public int AddVector(Punkt3D 3dpoint)
+    //{
+    //    return ballX + Punkt3D.X
+    //}
+
+    //public int SetPosition(int x, int y, int z)
+    //{
+
+    //}
+
+    //public int SetPosition(Punkt3D 3dpoint)
+    //{
+
+    //}
+
+    //public string SetColor(Farben farbe)
+    //{
+
+    //}
+
+    public static void AusgabeColorPosition(Ball ball)
+    {
+        Console.WriteLine($"Farbe: {ball.Farbe}, Position: {ball.Position.X}, {ball.Position.Y}, {ball.Position.Z}");
     }
 }
