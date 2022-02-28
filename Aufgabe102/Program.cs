@@ -25,6 +25,10 @@ public class Program
         Console.WriteLine($"{ball1.Position.Y}");
         Console.WriteLine($"{ball1.Position.Z}");
 
+        //-------------------------------------------------------
+
+
+
         Console.ReadLine();
 
 

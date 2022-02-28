@@ -19,10 +19,16 @@ public class Ball
 
     //Methoden
 
-    //public int AddVector(int x, int y, int z)
-    //{
-    //    return 
-    //}
+    public Ball AddVector(int x, int y, int z)
+    {
+        var ball = new Ball();
+
+        ball.Position.X = this.Position.X + x;
+        ball.Position.Y = this.Position.Y + y;
+        ball.Position.Z = this.Position.Z + z;
+
+        return ball;
+    }
 
     //public int AddVector(Punkt3D 3dpoint)
     //{
