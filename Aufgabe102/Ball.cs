@@ -19,36 +19,38 @@ public class Ball
 
     //Methoden
 
-    public Ball AddVector(int x, int y, int z)
+    public void AddVector(int x, int y, int z)
     {
-        var ball = new Ball();
-
-        ball.Position.X = this.Position.X + x;
-        ball.Position.Y = this.Position.Y + y;
-        ball.Position.Z = this.Position.Z + z;
-
-        return ball;
+        Position.X = Position.X + x;
+        Position.Y = Position.Y + y;
+        Position.Z = Position.Z + z;
     }
 
-    //public int AddVector(Punkt3D 3dpoint)
-    //{
-    //    return ballX + Punkt3D.X
-    //}
+    public void AddVector(Punkt3D pointToAdd)
+    {
+        Position.X = Position.X + pointToAdd.X;
+        Position.Y = Position.Y + pointToAdd.Y;
+        Position.Z = Position.Z + pointToAdd.Z;
+    }
 
-    //public int SetPosition(int x, int y, int z)
-    //{
+    public void SetPosition(int x, int y, int z)
+    {
+        Position.X = x;
+        Position.Y = y;
+        Position.Z = z;
+    }
 
-    //}
+    public void SetPosition(Punkt3D pointToSet)
+    {
+        Position.X = pointToSet.X;
+        Position.Y = pointToSet.Y;
+        Position.Z = pointToSet.Z;
+    }
 
-    //public int SetPosition(Punkt3D 3dpoint)
-    //{
-
-    //}
-
-    //public string SetColor(Farben farbe)
-    //{
-
-    //}
+    public void SetColor(Farben colorToSet)
+    {
+        Farbe = colorToSet;
+    }
 
     public static void AusgabeColorPosition(Ball ball)
     {

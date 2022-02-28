@@ -29,7 +29,7 @@ public class Program
 
 
 
-        Console.ReadLine();
+        //Console.ReadLine();
 
 
         // ###################################
@@ -43,6 +43,21 @@ public class Program
         Punkt3D dreiD12 = new Punkt3D(80, 90, 100);
         Console.WriteLine("-----------------------------------");
 
+
+
+
+        // TEST - ADDVector
+        Punkt3D punkt3D = new(1,1,1);
+        Punkt3D punktAddition = new(2,2,2);
+        Ball ballAddition = new(Farben.Red, punkt3D);
+
+        // Aufrufen der Methode an der Instanz (Objekt) der Klasse Ball (ohne static)
+        ballAddition.AddVector(punktAddition);
+
+        // SetColor
+        ballAddition.SetColor(Farben.Green);
+
+        ballAddition.AusgabeColorPosition();
 
         // output
         //Console.WriteLine(dreiD1.ToString());
