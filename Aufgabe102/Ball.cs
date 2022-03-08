@@ -19,7 +19,7 @@ public class Ball
 
     //Methoden
 
-    public void AddVector(int x, int y, int z)
+    public void AddVector(int x, int y, int z) 
     {
         Position.X = Position.X + x;
         Position.Y = Position.Y + y;
@@ -52,8 +52,19 @@ public class Ball
         Farbe = colorToSet;
     }
 
-    public static void AusgabeColorPosition(Ball ball)
+    // Aufruf dieser Methode an einem Objekt/Instanz dieser Klasse.
+    // no keyword static
+    // => obj.AusgabeColorPosition();
+    public void AusgabeColorPosition()
     {
-        Console.WriteLine($"Farbe: {ball.Farbe}, Position: {ball.Position.X}, {ball.Position.Y}, {ball.Position.Z}");
+        Console.WriteLine($"FARBE: {this.Farbe} ||| POSITION: X = {this.Position.X}, Y = {Position.Y}, Z = {Position.Z}");
+    }
+
+    // Ich gehöre der Klasse Baby. Aufruf über die Klasse, I dont care about instances.
+    // keyword static
+    // => Ball.DoSomething();
+    public static void DoSomething()
+    {
+        Console.WriteLine("Do something");
     }
 }
