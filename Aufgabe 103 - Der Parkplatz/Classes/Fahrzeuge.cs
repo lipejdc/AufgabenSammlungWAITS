@@ -8,6 +8,25 @@ namespace Aufgabe_103___Der_Parkplatz.Classes
 {
     public class Fahrzeuge : IFahrzeugOhneMotor, IFahrzeugMitMotor, IFahrzeugZusatz
     {
+        public Fahrzeuge(Enum typ, Colors farbe, int länge, int breite, int hubraum, int leistung, int drehmoment, double beschleunigung0_100, int höchstgeschwindigkeit, int zuladung)
+        {
+            Typ = typ;
+            Farbe = farbe;
+            Länge = länge;
+            Breite = breite;
+            Hubraum = hubraum;
+            Leistung = leistung;
+            Drehmoment = drehmoment;
+            Beschleunigung0_100 = beschleunigung0_100;
+            Höchstgeschwindigkeit = höchstgeschwindigkeit;
+            Zuladung = zuladung;
+        }
+
+        public Fahrzeuge(Colors farbe)
+        {
+            Farbe = farbe;
+        }
+
         //Eigenschaften FahrzeugOhneMotor
         public Enum Typ { get; set; }
         public Colors Farbe { get; set; }
@@ -23,5 +42,8 @@ namespace Aufgabe_103___Der_Parkplatz.Classes
 
         //Eigenschaften FahrzeugZusatz
         public int Zuladung { get; set; }
+
+
+
     }
 }
