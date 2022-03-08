@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Aufgabe_103___Der_Parkplatz.Classes
 {
-    public enum Fahrzeugarten
+    public enum Fahrzeugart
     {
         Fahrrad,
         Motorrad,

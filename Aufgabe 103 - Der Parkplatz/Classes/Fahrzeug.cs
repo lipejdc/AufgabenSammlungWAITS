@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Aufgabe_103___Der_Parkplatz.Classes
 {
-    public class Fahrzeuge : IFahrzeugOhneMotor, IFahrzeugMitMotor, IFahrzeugZusatz
+    public class Fahrzeug : IFahrzeugOhneMotor, IFahrzeugMitMotor, IFahrzeugZusatz
     {
-        public Fahrzeuge(Enum typ, Colors farbe, int länge, int breite, int hubraum, int leistung, int drehmoment, double beschleunigung0_100, int höchstgeschwindigkeit, int zuladung)
+        public Fahrzeug(Fahrzeugart typ, Colors farbe, int länge, int breite, int hubraum, int leistung, int drehmoment, 
+            double beschleunigung0_100, int höchstgeschwindigkeit, int zuladung)
         {
             Typ = typ;
             Farbe = farbe;
@@ -22,13 +23,13 @@ namespace Aufgabe_103___Der_Parkplatz.Classes
             Zuladung = zuladung;
         }
 
-        public Fahrzeuge(Colors farbe)
+        public Fahrzeug(Colors farbe)
         {
             Farbe = farbe;
         }
 
         //Eigenschaften FahrzeugOhneMotor
-        public Enum Typ { get; set; }
+        public Fahrzeugart Typ { get; set; }
         public Colors Farbe { get; set; }
         public int Länge { get; set; }
         public int Breite { get; set; }

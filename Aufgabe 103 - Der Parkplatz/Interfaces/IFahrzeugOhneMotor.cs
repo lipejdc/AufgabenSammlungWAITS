@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Aufgabe_103___Der_Parkplatz.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace Aufgabe_103___Der_Parkplatz
 {
     public interface IFahrzeugOhneMotor
     {
-        Enum Typ { get; set; }
+        Fahrzeugart Typ { get; set; }
         Colors Farbe { get; set; }
         int Länge { get; set; }
         int Breite { get; set; }

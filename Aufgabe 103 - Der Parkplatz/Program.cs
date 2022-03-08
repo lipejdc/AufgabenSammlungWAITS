@@ -5,12 +5,12 @@ class Program
 {
     static void Main(string[] args)
     {
-        Fahrzeugarten.Fahrrad bike = new();
-        Fahrzeugarten.Motorrad motorbike = new();
-        Fahrzeugarten.Auto car = new();
-        Fahrzeugarten.LKW truck = new();
+        Fahrzeug bike = new("Rot");
+        Fahrzeug motorbike = new("Blau");
+        Fahrzeug car = new("Gelb");
+        Fahrzeug truck = new("Weiss");
 
-        Queue<Fahrzeuge> alleFahrzeuge = new Queue<Fahrzeuge>();
+        Queue<Fahrzeug> alleFahrzeuge = new Queue<Fahrzeug>();
        
     }
 }
