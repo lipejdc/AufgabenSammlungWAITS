@@ -5,12 +5,26 @@ class Program
 {
     static void Main(string[] args)
     {
-        Fahrzeug bike = new("Rot");
-        Fahrzeug motorbike = new("Blau");
-        Fahrzeug car = new("Gelb");
-        Fahrzeug truck = new("Weiss");
+        Fahrzeug bike = new(Fahrzeugart.Fahrrad);
+        Fahrzeug motorbike = new(Fahrzeugart.Motorrad);
+        Fahrzeug car = new(Fahrzeugart.Auto);
+        Fahrzeug truck = new(Fahrzeugart.LKW);
+
 
         Queue<Fahrzeug> alleFahrzeuge = new Queue<Fahrzeug>();
+
+        alleFahrzeuge.Enqueue(bike);
+        alleFahrzeuge.Enqueue(motorbike);
+        alleFahrzeuge.Enqueue(car);
+        alleFahrzeuge.Enqueue(truck);
+
+        foreach (var fahrzeug in alleFahrzeuge)
+        {
+            Console.WriteLine($"{fahrzeug.Typ}: FARBE: {fahrzeug.Farbe} || LÄNGE: {fahrzeug.Länge} || BREITE: {fahrzeug.Breite}" +
+                $"|| HUBRAUM: {fahrzeug.Hubraum} || LEISTUNG: {fahrzeug.Leistung} || DREHMOMENT: {fahrzeug.Drehmoment} ||" +
+                $"BESCHLEUNING0_100: {fahrzeug.Beschleunigung0_100} || HÖCHSTGESCHWINDIGKEIT: {fahrzeug.Höchstgeschwindigkeit}" +
+                $"|| ZULADUNG: {fahrzeug.Zuladung}");
+        }
        
     }
 }

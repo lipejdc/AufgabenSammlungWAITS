@@ -13,6 +13,5 @@ namespace Aufgabe_103___Der_Parkplatz
         Colors Farbe { get; set; }
         int Länge { get; set; }
         int Breite { get; set; }
-
     }
 }

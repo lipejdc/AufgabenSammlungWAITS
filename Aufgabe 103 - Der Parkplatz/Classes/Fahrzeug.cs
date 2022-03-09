@@ -8,24 +8,11 @@ namespace Aufgabe_103___Der_Parkplatz.Classes
 {
     public class Fahrzeug : IFahrzeugOhneMotor, IFahrzeugMitMotor, IFahrzeugZusatz
     {
-        public Fahrzeug(Fahrzeugart typ, Colors farbe, int länge, int breite, int hubraum, int leistung, int drehmoment, 
-            double beschleunigung0_100, int höchstgeschwindigkeit, int zuladung)
+        //Konstruktor
+        public Fahrzeug(Fahrzeugart typ)
         {
             Typ = typ;
-            Farbe = farbe;
-            Länge = länge;
-            Breite = breite;
-            Hubraum = hubraum;
-            Leistung = leistung;
-            Drehmoment = drehmoment;
-            Beschleunigung0_100 = beschleunigung0_100;
-            Höchstgeschwindigkeit = höchstgeschwindigkeit;
-            Zuladung = zuladung;
-        }
-
-        public Fahrzeug(Colors farbe)
-        {
-            Farbe = farbe;
+            SetDefaultVehicleValues();
         }
 
         //Eigenschaften FahrzeugOhneMotor
@@ -42,9 +29,73 @@ namespace Aufgabe_103___Der_Parkplatz.Classes
         public int Höchstgeschwindigkeit { get; set; }
 
         //Eigenschaften FahrzeugZusatz
-        public int Zuladung { get; set; }
+        public double Zuladung { get; set; }
 
+        //Methoden für die Erzeugung von Zufallswerten (Integer und Double)
+        public static int GenerateRandomIntegerValue(int min, int max)
+        {
+            var rdn = new Random();
+            return rdn.Next(min, max);
+        }
 
+        public static double GenerateRandomDoubleValue(double min, double max)
+        {
+            var rnd = new Random();
+            var roundDouble = rnd.NextDouble() * (max - min) + min;
+
+            return Math.Round(roundDouble, 2);
+        }
+
+        //Methode für die Fallunterscheidung von Fahrzeugarten und die Zuweisung deren Eigenschaften
+        public void SetDefaultVehicleValues()
+        {
+            if (Typ == Fahrzeugart.Fahrrad)
+            {
+                Farbe = new Colors("red");
+                Länge = GenerateRandomIntegerValue(150, 201);
+                Breite = GenerateRandomIntegerValue(60, 71);
+            }
+
+            else if (Typ == Fahrzeugart.Motorrad)
+            {
+                Farbe = new Colors("blue");
+                Länge = GenerateRandomIntegerValue(150, 191);
+                Breite = GenerateRandomIntegerValue(60, 81);
+                Hubraum = GenerateRandomIntegerValue(50, 1401);
+                Leistung = GenerateRandomIntegerValue(2, 163);
+                Drehmoment = GenerateRandomIntegerValue(5, 201);
+                Beschleunigung0_100 = GenerateRandomDoubleValue(7.6, 2.4);
+                Höchstgeschwindigkeit = GenerateRandomIntegerValue(25, 301);
+                Zuladung = GenerateRandomDoubleValue(0, 0.271);
+            }
+
+            else if (Typ == Fahrzeugart.Auto)
+            {
+                Farbe = new Colors("yellow");
+                Länge = GenerateRandomIntegerValue(250, 618);
+                Breite = GenerateRandomIntegerValue(160, 186);
+                Hubraum = GenerateRandomIntegerValue(49, 84001);
+                Leistung = GenerateRandomIntegerValue(44, 3825);
+                Drehmoment = GenerateRandomIntegerValue(90, 1500);
+                Beschleunigung0_100 = GenerateRandomDoubleValue(16.0, 1.7);
+                Höchstgeschwindigkeit = GenerateRandomIntegerValue(80, 509);
+                Zuladung = GenerateRandomDoubleValue(0, 0.55);
+            }
+
+            else
+            {
+                Farbe = new Colors("white");
+                Länge = GenerateRandomIntegerValue(320, 5000);
+                Breite = GenerateRandomIntegerValue(204, 975);
+                Hubraum = GenerateRandomIntegerValue(12800, 16400);
+                Leistung = GenerateRandomIntegerValue(132, 1766);
+                Drehmoment = GenerateRandomIntegerValue(1250, 3501);
+                Beschleunigung0_100 = GenerateRandomDoubleValue(20.0, 4.6);
+                Höchstgeschwindigkeit = GenerateRandomIntegerValue(60, 276);
+                Zuladung = GenerateRandomDoubleValue(0, 25);
+            }
+
+        }
 
     }
 }
