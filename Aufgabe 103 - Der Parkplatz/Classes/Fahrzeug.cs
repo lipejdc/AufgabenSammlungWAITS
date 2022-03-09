@@ -2,18 +2,11 @@
 
 public class Fahrzeug : IFahrzeugOhneMotor, IFahrzeugMitMotor, IFahrzeugZusatz
 {
-    public Fahrzeug(Fahrzeugart typ, Colors farbe)
+    //public Fahrzeug(Fahrzeugart typ, Colors farbe)
+    public Fahrzeug(Fahrzeugart typ)
     {
         Typ = typ;
-        Farbe = farbe;
-        //Länge = länge;
-        //Breite = breite;
-        //Hubraum = hubraum;
-        //Leistung = leistung;
-        //Drehmoment = drehmoment;
-        //Beschleunigung0_100 = beschleunigung0_100;
-        //Höchstgeschwindigkeit = höchstgeschwindigkeit;
-        //Zuladung = zuladung;
+        SetDefaultVehicelValues();
     }
 
     //Eigenschaften FahrzeugOhneMotor
@@ -31,4 +24,44 @@ public class Fahrzeug : IFahrzeugOhneMotor, IFahrzeugMitMotor, IFahrzeugZusatz
 
     //Eigenschaften FahrzeugZusatz
     public int Zuladung { get; set; }
+
+    public void SetDefaultVehicelValues()
+    {
+        // FAHRRAD
+        if (Typ == Fahrzeugart.Fahrrad)
+        {
+            this.Farbe = new Colors("red");
+            this.Länge = RandomValue(1, 3);
+            this.Breite = RandomValue(1, 1); 
+        }
+        // MOTORRAD
+        else if (Typ == Fahrzeugart.Motorrad)
+        {
+            this.Farbe = new Colors("blau");
+        }
+        // AUTO
+        else if (Typ == Fahrzeugart.Auto)
+        {
+            this.Farbe = new Colors("gelb");
+            
+        }
+        // LKW
+        else
+        {
+            this.Farbe = new Colors("weiß");
+            
+        }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="min"></param>
+    /// <param name="max"></param>
+    /// <returns></returns>
+    public static int RandomValue(int min, int max)
+    {
+        var rnd = new Random();
+        return rnd.Next(min, max);
+    }
 }
