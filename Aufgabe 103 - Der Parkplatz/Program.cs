@@ -20,10 +20,8 @@ class Program
 
         foreach (var fahrzeug in alleFahrzeuge)
         {
-            Console.WriteLine($"{fahrzeug.Typ}: FARBE: {fahrzeug.Farbe} || LÄNGE: {fahrzeug.Länge} || BREITE: {fahrzeug.Breite}" +
-                $"|| HUBRAUM: {fahrzeug.Hubraum} || LEISTUNG: {fahrzeug.Leistung} || DREHMOMENT: {fahrzeug.Drehmoment} ||" +
-                $"BESCHLEUNING0_100: {fahrzeug.Beschleunigung0_100} || HÖCHSTGESCHWINDIGKEIT: {fahrzeug.Höchstgeschwindigkeit}" +
-                $"|| ZULADUNG: {fahrzeug.Zuladung}");
+            Console.WriteLine(fahrzeug.ToString());
+            Console.WriteLine("--------------------------------------------------------");
         }
        
     }

@@ -31,6 +31,13 @@ namespace Aufgabe_103___Der_Parkplatz.Classes
         //Eigenschaften FahrzeugZusatz
         public double Zuladung { get; set; }
 
+        private string _ausgabe;
+
+        public override string ToString()
+        {
+            return _ausgabe;
+        }
+
         //Methoden für die Erzeugung von Zufallswerten (Integer und Double)
         public static int GenerateRandomIntegerValue(int min, int max)
         {
@@ -54,6 +61,10 @@ namespace Aufgabe_103___Der_Parkplatz.Classes
                 Farbe = new Colors("red");
                 Länge = GenerateRandomIntegerValue(150, 201);
                 Breite = GenerateRandomIntegerValue(60, 71);
+                _ausgabe = $"FAHRRAD: \n" +
+                           $"Farbe: {Farbe.Farbe} \n" +
+                           $"Länge: {Länge} \n" +
+                           $"Breite: {Breite}";
             }
 
             else if (Typ == Fahrzeugart.Motorrad)
@@ -67,6 +78,16 @@ namespace Aufgabe_103___Der_Parkplatz.Classes
                 Beschleunigung0_100 = GenerateRandomDoubleValue(7.6, 2.4);
                 Höchstgeschwindigkeit = GenerateRandomIntegerValue(25, 301);
                 Zuladung = GenerateRandomDoubleValue(0, 0.271);
+                _ausgabe = $"MOTORRAD: \n" +
+                           $"Farbe: {Farbe.Farbe} \n" +
+                           $"Länge: {Länge} \n" +
+                           $"Breite: {Breite} \n" +
+                           $"Hubraum: {Hubraum} \n" +
+                           $"Leistung: {Leistung} \n" +
+                           $"Drehmoment {Drehmoment} \n" +
+                           $"Beschleunigung0_100: {Beschleunigung0_100} \n" +
+                           $"Höchstgeschwindigkeit: {Höchstgeschwindigkeit} \n" +
+                           $"Zuladung: {Zuladung}";
             }
 
             else if (Typ == Fahrzeugart.Auto)
@@ -80,6 +101,16 @@ namespace Aufgabe_103___Der_Parkplatz.Classes
                 Beschleunigung0_100 = GenerateRandomDoubleValue(16.0, 1.7);
                 Höchstgeschwindigkeit = GenerateRandomIntegerValue(80, 509);
                 Zuladung = GenerateRandomDoubleValue(0, 0.55);
+                _ausgabe = $"AUTO: \n" +
+                           $"Farbe: {Farbe.Farbe} \n" +
+                           $"Länge: {Länge} \n" +
+                           $"Breite: {Breite} \n" +
+                           $"Hubraum: {Hubraum} \n" +
+                           $"Leistung: {Leistung} \n" +
+                           $"Drehmoment {Drehmoment} \n" +
+                           $"Beschleunigung0_100: {Beschleunigung0_100} \n" +
+                           $"Höchstgeschwindigkeit: {Höchstgeschwindigkeit} \n" +
+                           $"Zuladung: {Zuladung}";
             }
 
             else
@@ -93,6 +124,16 @@ namespace Aufgabe_103___Der_Parkplatz.Classes
                 Beschleunigung0_100 = GenerateRandomDoubleValue(20.0, 4.6);
                 Höchstgeschwindigkeit = GenerateRandomIntegerValue(60, 276);
                 Zuladung = GenerateRandomDoubleValue(0, 25);
+                _ausgabe = $"LKW: \n" +
+                           $"Farbe: {Farbe.Farbe} \n" +
+                           $"Länge: {Länge} \n" +
+                           $"Breite: {Breite} \n" +
+                           $"Hubraum: {Hubraum} \n" +
+                           $"Leistung: {Leistung} \n" +
+                           $"Drehmoment {Drehmoment} \n" +
+                           $"Beschleunigung0_100: {Beschleunigung0_100} \n" +
+                           $"Höchstgeschwindigkeit: {Höchstgeschwindigkeit} \n" +
+                           $"Zuladung: {Zuladung}";
             }
 
         }
