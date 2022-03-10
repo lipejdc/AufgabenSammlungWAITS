@@ -23,6 +23,5 @@ class Program
             Console.WriteLine(fahrzeug.ToString());
             Console.WriteLine("--------------------------------------------------------");
         }
-       
     }
 }
