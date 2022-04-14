@@ -25,8 +25,10 @@ public class Fahrzeug : IFahrzeugOhneMotor, IFahrzeugMitMotor, IFahrzeugZusatz
     //Eigenschaften FahrzeugZusatz
     public double Zuladung { get; set; }
 
+    //Variable für die Konsolenausgabe jedes Fahrzeugtyp
     private string _ausgabe;
 
+    //Überschreibung der Eigenschaften der Objekte in String
     public override string ToString()
     {
         return _ausgabe;
@@ -52,18 +54,18 @@ public class Fahrzeug : IFahrzeugOhneMotor, IFahrzeugMitMotor, IFahrzeugZusatz
     {
         if (Typ == Fahrzeugart.Fahrrad)
         {
-            Farbe = new Colors("red");
+            Farbe = new Colors("rot");
             Länge = GenerateRandomIntegerValue(150, 201);
             Breite = GenerateRandomIntegerValue(60, 71);
             _ausgabe = $"FAHRRAD: \n" +
                        $"Farbe: {Farbe.Farbe} \n" +
-                       $"Länge: {Länge} \n" +
-                       $"Breite: {Breite}";
+                       $"Länge: {Länge} cm \n" +
+                       $"Breite: {Breite} cm";
         }
 
         else if (Typ == Fahrzeugart.Motorrad)
         {
-            Farbe = new Colors("blue");
+            Farbe = new Colors("blau");
             Länge = GenerateRandomIntegerValue(150, 191);
             Breite = GenerateRandomIntegerValue(60, 81);
             Hubraum = GenerateRandomIntegerValue(50, 1401);
@@ -74,19 +76,19 @@ public class Fahrzeug : IFahrzeugOhneMotor, IFahrzeugMitMotor, IFahrzeugZusatz
             Zuladung = GenerateRandomDoubleValue(0, 0.271);
             _ausgabe = $"MOTORRAD: \n" +
                        $"Farbe: {Farbe.Farbe} \n" +
-                       $"Länge: {Länge} \n" +
-                       $"Breite: {Breite} \n" +
-                       $"Hubraum: {Hubraum} \n" +
-                       $"Leistung: {Leistung} \n" +
-                       $"Drehmoment {Drehmoment} \n" +
-                       $"Beschleunigung0_100: {Beschleunigung0_100} \n" +
-                       $"Höchstgeschwindigkeit: {Höchstgeschwindigkeit} \n" +
-                       $"Zuladung: {Zuladung}";
+                       $"Länge: {Länge} cm \n" +
+                       $"Breite: {Breite} cm \n" +
+                       $"Hubraum: {Hubraum} ccm \n" +
+                       $"Leistung: {Leistung} kW \n" +
+                       $"Drehmoment {Drehmoment} Nm \n" +
+                       $"Beschleunigung0_100: {Beschleunigung0_100} s \n" +
+                       $"Höchstgeschwindigkeit: {Höchstgeschwindigkeit} km/h \n" +
+                       $"Zuladung: {Zuladung} Tonnen";
         }
 
         else if (Typ == Fahrzeugart.Auto)
         {
-            Farbe = new Colors("yellow");
+            Farbe = new Colors("gelb");
             Länge = GenerateRandomIntegerValue(250, 618);
             Breite = GenerateRandomIntegerValue(160, 186);
             Hubraum = GenerateRandomIntegerValue(49, 84001);
@@ -97,19 +99,19 @@ public class Fahrzeug : IFahrzeugOhneMotor, IFahrzeugMitMotor, IFahrzeugZusatz
             Zuladung = GenerateRandomDoubleValue(0, 0.55);
             _ausgabe = $"AUTO: \n" +
                        $"Farbe: {Farbe.Farbe} \n" +
-                       $"Länge: {Länge} \n" +
-                       $"Breite: {Breite} \n" +
-                       $"Hubraum: {Hubraum} \n" +
-                       $"Leistung: {Leistung} \n" +
-                       $"Drehmoment {Drehmoment} \n" +
-                       $"Beschleunigung0_100: {Beschleunigung0_100} \n" +
-                       $"Höchstgeschwindigkeit: {Höchstgeschwindigkeit} \n" +
-                       $"Zuladung: {Zuladung}";
+                       $"Länge: {Länge} cm \n" +
+                       $"Breite: {Breite} cm \n" +
+                       $"Hubraum: {Hubraum} ccm \n" +
+                       $"Leistung: {Leistung} kW \n" +
+                       $"Drehmoment {Drehmoment} Nm \n" +
+                       $"Beschleunigung0_100: {Beschleunigung0_100} s \n" +
+                       $"Höchstgeschwindigkeit: {Höchstgeschwindigkeit} km/h \n" +
+                       $"Zuladung: {Zuladung} Tonnen";
         }
 
         else
         {
-            Farbe = new Colors("white");
+            Farbe = new Colors("weiß");
             Länge = GenerateRandomIntegerValue(320, 5000);
             Breite = GenerateRandomIntegerValue(204, 975);
             Hubraum = GenerateRandomIntegerValue(12800, 16400);
@@ -120,14 +122,14 @@ public class Fahrzeug : IFahrzeugOhneMotor, IFahrzeugMitMotor, IFahrzeugZusatz
             Zuladung = GenerateRandomDoubleValue(0, 25);
             _ausgabe = $"LKW: \n" +
                        $"Farbe: {Farbe.Farbe} \n" +
-                       $"Länge: {Länge} \n" +
-                       $"Breite: {Breite} \n" +
-                       $"Hubraum: {Hubraum} \n" +
-                       $"Leistung: {Leistung} \n" +
-                       $"Drehmoment {Drehmoment} \n" +
-                       $"Beschleunigung0_100: {Beschleunigung0_100} \n" +
-                       $"Höchstgeschwindigkeit: {Höchstgeschwindigkeit} \n" +
-                       $"Zuladung: {Zuladung}";
+                       $"Länge: {Länge} cm \n" +
+                       $"Breite: {Breite} cm \n" +
+                       $"Hubraum: {Hubraum} ccm \n" +
+                       $"Leistung: {Leistung} kW \n" +
+                       $"Drehmoment {Drehmoment} Nm \n" +
+                       $"Beschleunigung0_100: {Beschleunigung0_100} s \n" +
+                       $"Höchstgeschwindigkeit: {Höchstgeschwindigkeit} km/h \n" +
+                       $"Zuladung: {Zuladung} Tonnen";
         }
 
     }

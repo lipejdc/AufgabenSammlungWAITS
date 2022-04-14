@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32002.185
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aufgabe100", "Aufgabe100\Aufgabe100.csproj", "{D0CEE946-332A-4CF8-A90C-B6B827616F55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aufgabe100 - Zahlenratespiel", "Aufgabe100\Aufgabe100 - Zahlenratespiel.csproj", "{D0CEE946-332A-4CF8-A90C-B6B827616F55}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aufgabe101", "Aufgabe101\Aufgabe101.csproj", "{76906278-40C3-44DE-97D3-7D24D6168B5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aufgabe101 - Das Parkhaus", "Aufgabe101\Aufgabe101 - Das Parkhaus.csproj", "{76906278-40C3-44DE-97D3-7D24D6168B5E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aufgabe102", "Aufgabe102\Aufgabe102.csproj", "{3BC7441B-F781-4BED-8042-A33F25D771C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aufgabe102 - Der Ball", "Aufgabe102\Aufgabe102 - Der Ball.csproj", "{3BC7441B-F781-4BED-8042-A33F25D771C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe103 - Der Parkplatz", "Aufgabe 103 - Der Parkplatz\Aufgabe103 - Der Parkplatz.csproj", "{7BC7AEAE-3D41-44E0-B5E2-0B7B58472EE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aufgabe103 - Der Parkplatz", "Aufgabe 103 - Der Parkplatz\Aufgabe103 - Der Parkplatz.csproj", "{7BC7AEAE-3D41-44E0-B5E2-0B7B58472EE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe104 - Wortanalyse", "Aufgabe104 - Wortanalyse\Aufgabe104 - Wortanalyse.csproj", "{E3776B2B-E6CB-4F71-82EE-756B267409CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe102 - Der Ball_Test", "Aufgabe102 - Der Ball_Test\Aufgabe102 - Der Ball_Test.csproj", "{02911E01-ACAC-44B3-920F-C158F3E4A426}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{7BC7AEAE-3D41-44E0-B5E2-0B7B58472EE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BC7AEAE-3D41-44E0-B5E2-0B7B58472EE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BC7AEAE-3D41-44E0-B5E2-0B7B58472EE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3776B2B-E6CB-4F71-82EE-756B267409CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3776B2B-E6CB-4F71-82EE-756B267409CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3776B2B-E6CB-4F71-82EE-756B267409CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3776B2B-E6CB-4F71-82EE-756B267409CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02911E01-ACAC-44B3-920F-C158F3E4A426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02911E01-ACAC-44B3-920F-C158F3E4A426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02911E01-ACAC-44B3-920F-C158F3E4A426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02911E01-ACAC-44B3-920F-C158F3E4A426}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
